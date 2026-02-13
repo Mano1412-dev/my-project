@@ -1,3 +1,5 @@
+WAY: 1
+
 Create a server in a VM (either AWS or Azure).
 
 Install Terraform on the VM.
@@ -20,3 +22,21 @@ Resource Group
    ├── NSG (Port 22, 80, 8080)
    ├── NIC
    └── Linux VM (Ubuntu)
+
+
+WAY: 2
+Write Terraform Code
+        ↓
+Push to GitHub
+        ↓
+Azure DevOps Pipeline triggers
+        ↓
+Terraform Init
+        ↓
+Terraform Plan
+        ↓
+Terraform Apply
+        ↓
+Azure Infrastructure Created
+
+
