@@ -1,0 +1,8 @@
+Repo should like
+
+terraform-azure/
+ ├── main.tf
+ ├── variables.tf
+ ├── outputs.tf
+
+push to Github
