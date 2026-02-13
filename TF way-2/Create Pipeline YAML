@@ -1,0 +1,30 @@
+Create file in repo:
+azure-pipelines.yml
+
+Paste this:
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  terraformVersion: '1.6.0'
+
+steps:
+
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: '$(terraformVersion)'
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'azure-terraform-connection'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      terraform init
+      terraform plan
+      terraform apply -auto-approve
+
+commit & push
