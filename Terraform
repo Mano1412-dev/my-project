@@ -11,3 +11,12 @@ Create the respective configuration files.
 Run the Terraform commands.
 
 Check the status directly in the cloud console.
+
+Architecture We Will Create:
+Resource Group
+   ├── VNet
+   │     └── Subnet
+   ├── Public IP
+   ├── NSG (Port 22, 80, 8080)
+   ├── NIC
+   └── Linux VM (Ubuntu)
