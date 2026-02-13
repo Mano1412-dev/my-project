@@ -1,0 +1,23 @@
+Add to outputs.tf
+
+output "public_ip" {
+  value = azurerm_public_ip.public_ip.ip_address
+}
+
+then
+terraform output public_ip
+
+SSH
+ssh azureuser@<public-ip>
+
+
+
+Security Best Practices (DevOps Level)
+instead of
+source_address_prefix = "*"
+
+use
+source_address_prefix = "YOUR_PUBLIC_IP/32"
+
+Destroy when done
+terraform destroy
