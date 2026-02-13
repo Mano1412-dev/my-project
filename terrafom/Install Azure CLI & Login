@@ -9,3 +9,20 @@ az login
 Select a correct subscription
 
 az account set --subscription "<subscription-name>"
+
+Check if You Are Logged In
+az account show
+
+Check Current Subscription
+az account list --output table
+
+Confirm Subscription ID (Important for Terraform)
+az account show --query id -o tsv
+
+Check If Token Is Working (Advanced Check)
+az group list
+
+Best DevOps-Level Verification Command
+az account show --output table
+
+
