@@ -1,0 +1,11 @@
+Install commend:
+
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+Login
+
+az login
+
+Select a correct subscription
+
+az account set --subscription "<subscription-name>"
