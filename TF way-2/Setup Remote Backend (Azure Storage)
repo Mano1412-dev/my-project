@@ -1,0 +1,24 @@
+Create storage Account:
+
+az storage account create \
+  --name tfstatestorage12345 \
+  --resource-group devops-rg \
+  --location centralindia \
+  --sku Standard_LRS
+
+Create container:
+az storage container create \
+  --name tfstate \
+  --account-name tfstatestorage12345
+
+Then update Terraform:
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "devops-rg"
+    storage_account_name = "tfstatestorage12345"
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate"
+  }
+}
+
+Now state is secure and shared.
