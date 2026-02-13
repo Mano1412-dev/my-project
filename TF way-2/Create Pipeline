@@ -1,0 +1,6 @@
+Go to:
+
+Pipelines → New Pipeline
+→ GitHub
+→ Select your Terraform repo
+→ Choose YAML
