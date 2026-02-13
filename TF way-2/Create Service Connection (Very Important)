@@ -1,0 +1,18 @@
+Azure DevOps must authenticate to Azure.
+
+Go to:
+
+Project Settings → Service Connections
+→ New Service Connection
+→ Choose Azure Resource Manager
+
+Choose:
+
+✔ Service principal (automatic)
+✔ Select subscription
+✔ Give name: azure-terraform-connection
+✔ Grant access to all pipelines
+
+Save.
+
+Now Azure DevOps can deploy to your subscription.
