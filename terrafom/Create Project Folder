@@ -1,0 +1,3 @@
+mkdir terraform-azure-vm
+cd terraform-azure-vm
+touch main.tf variables.tf outputs.tf
