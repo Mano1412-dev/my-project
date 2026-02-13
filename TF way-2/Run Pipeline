@@ -1,0 +1,15 @@
+Azure DevOps will:
+
+Spin up temporary Ubuntu agent
+
+Install Terraform
+
+Authenticate using service connection
+
+Run terraform init
+
+Run terraform plan
+
+Run terraform apply
+
+Infra will be created automatically.
