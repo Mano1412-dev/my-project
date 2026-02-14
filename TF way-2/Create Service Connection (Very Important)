@@ -16,3 +16,14 @@ Choose:
 Save.
 
 Now Azure DevOps can deploy to your subscription.
+
+
+How Azure DevOps Connects to Your Azure Subscription
+
+Inside Azure DevOps:
+
+Project Settings → Service Connections → Azure Resource Manager
+
+It creates a Service Principal automatically.
+
+This gives pipeline permission to deploy.
