@@ -5,4 +5,32 @@ terraform-azure/
  ├── variables.tf
  ├── outputs.tf
 
-push to Github
+also need to add the azure pipeline yaml file here.
+
+azure-pipelines.yml   ← new file for CI/CD
+
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  terraformVersion: '1.6.0'
+
+steps:
+
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: '$(terraformVersion)'
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'azure-terraform-connection'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      terraform init
+      terraform plan
+      terraform apply -auto-approve
+
